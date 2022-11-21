@@ -264,19 +264,11 @@ sudo ikev2.sh
 
 **[配置 IPsec/XAuth ("Cisco IPsec") VPN 客户端](docs/clients-xauth-zh.md)**
 
-**[下载 VPN 文档的 PDF 版本（支持者）](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)**
+**[[支持者] 下载电子书：搭建自己的 VPN 服务器](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)**
 
 开始使用自己的专属 VPN! :sparkles::tada::rocket::sparkles:
 
-<details>
-<summary>
-如果你喜欢这个项目，可以表达你的支持或感谢。
-</summary>
-
-<a href="https://ko-fi.com/hwdsl2" target="_blank"><img height="36" width="187" src="docs/images/kofi2.png" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a> &nbsp;&nbsp;<a href="https://coindrop.to/hwdsl2" target="_blank"><img src="docs/images/embed-button.png" height="36" width="145" border="0" alt="Coindrop.to me" /></a>
-
-仅限支持者的内容可用。[点击查看详情](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)。
-</details>
+喜欢这个项目？[:heart: 赞助](https://github.com/sponsors/hwdsl2?metadata_o=iz) 或 [:coffee: 支持](https://ko-fi.com/hwdsl2) 并访问 [仅限支持者的内容](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)。
 
 ## 重要提示
 
@@ -346,6 +338,7 @@ https://gitlab.com/hwdsl2/setup-ipsec-vpn/-/raw/master/extras/vpnupgrade.sh
 - [转发端口到 VPN 客户端](docs/advanced-usage-zh.md#转发端口到-vpn-客户端)
 - [VPN 分流](docs/advanced-usage-zh.md#vpn-分流)
 - [访问 VPN 服务器的网段](docs/advanced-usage-zh.md#访问-vpn-服务器的网段)
+- [VPN 服务器网段访问 VPN 客户端](docs/advanced-usage-zh.md#vpn-服务器网段访问-vpn-客户端)
 - [更改 IPTables 规则](docs/advanced-usage-zh.md#更改-iptables-规则)
 - [部署 Google BBR 拥塞控制](docs/advanced-usage-zh.md#部署-google-bbr-拥塞控制)
 

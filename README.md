@@ -264,19 +264,11 @@ Get your computer or device to use the VPN. Please refer to:
 
 **[Configure IPsec/XAuth ("Cisco IPsec") VPN Clients](docs/clients-xauth.md)**
 
-**[Download PDF versions of VPN docs (supporters)](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-O5O7FVF8J)**
+**[[Supporters] Download eBook: Set Up Your Own VPN Server](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-O5O7FVF8J)**
 
 Enjoy your very own VPN! :sparkles::tada::rocket::sparkles:
 
-<details>
-<summary>
-Like this project? You can show your support or appreciation.
-</summary>
-
-<a href="https://ko-fi.com/hwdsl2" target="_blank"><img height="36" width="187" src="docs/images/kofi2.png" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a> &nbsp;&nbsp;<a href="https://coindrop.to/hwdsl2" target="_blank"><img src="docs/images/embed-button.png" height="36" width="145" border="0" alt="Coindrop.to me" /></a>
-
-Supporter-only content is available. [Click to see details](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-O5O7FVF8J).
-</details>
+Like this project? [:heart: Sponsor](https://github.com/sponsors/hwdsl2?metadata_o=i) or [:coffee: Support](https://ko-fi.com/hwdsl2) and access [supporter-only content](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-O5O7FVF8J).
 
 ## Important notes
 
@@ -346,6 +338,7 @@ See [Advanced usage](docs/advanced-usage.md).
 - [Port forwarding to VPN clients](docs/advanced-usage.md#port-forwarding-to-vpn-clients)
 - [Split tunneling](docs/advanced-usage.md#split-tunneling)
 - [Access VPN server's subnet](docs/advanced-usage.md#access-vpn-servers-subnet)
+- [Access VPN clients from server's subnet](docs/advanced-usage.md#access-vpn-clients-from-servers-subnet)
 - [Modify IPTables rules](docs/advanced-usage.md#modify-iptables-rules)
 - [Deploy Google BBR congestion control](docs/advanced-usage.md#deploy-google-bbr-congestion-control)
 
