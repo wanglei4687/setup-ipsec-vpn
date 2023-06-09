@@ -5,7 +5,7 @@
 # The latest version of this script is available at:
 # https://github.com/hwdsl2/setup-ipsec-vpn
 #
-# Copyright (C) 2021-2022 Lin Song <linsongui@gmail.com>
+# Copyright (C) 2021-2023 Lin Song <linsongui@gmail.com>
 #
 # This work is licensed under the Creative Commons Attribution-ShareAlike 3.0
 # Unported License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -51,8 +51,8 @@ check_os() {
       ;;
   esac
   os_ver=$(. /etc/os-release && printf '%s' "$VERSION_ID" | cut -d '.' -f 1,2)
-  if [ "$os_ver" != "3.15" ] && [ "$os_ver" != "3.16" ]; then
-    exiterr "This script only supports Alpine Linux 3.15/3.16."
+  if [ "$os_ver" != "3.16" ] && [ "$os_ver" != "3.17" ]; then
+    exiterr "This script only supports Alpine Linux 3.16/3.17."
   fi
 }
 
@@ -69,7 +69,7 @@ EOF
 }
 
 get_swan_ver() {
-  swan_ver_cur=4.9
+  swan_ver_cur=4.11
   base_url="https://github.com/hwdsl2/vpn-extras/releases/download/v1.0.0"
   swan_ver_url="$base_url/upg-v1-$os_type-$os_ver-swanver"
   swan_ver_latest=$(wget -t 2 -T 10 -qO- "$swan_ver_url" | head -n 1)

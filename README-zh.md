@@ -10,6 +10,8 @@ IPsec VPN 可以加密你的网络流量，以防止在通过因特网传送时�
 
 我们将使用 [Libreswan](https://libreswan.org/) 作为 IPsec 服务器，以及 [xl2tpd](https://github.com/xelerance/xl2tpd) 作为 L2TP 提供者。
 
+**[&raquo; :book: Book: 搭建自己的 VPN 服务器分步指南](https://books2read.com/vpnguidezh)**
+
 ## 快速开始
 
 首先，在你的 Linux 服务器\* 上安装 Ubuntu, Debian 或者 CentOS。
@@ -70,7 +72,7 @@ https://gitlab.com/hwdsl2/setup-ipsec-vpn/-/raw/master/vpnsetup.sh
 
 一个云服务器，虚拟专用服务器 (VPS) 或者专用服务器，安装以下操作系统之一：
 
-- Ubuntu 22.04, 20.04 或者 18.04
+- Ubuntu 22.04 或者 20.04
 - Debian 11 或者 10
 - CentOS 7 或者 CentOS Stream 9/8
 - Rocky Linux 或者 AlmaLinux 9/8
@@ -83,8 +85,8 @@ https://gitlab.com/hwdsl2/setup-ipsec-vpn/-/raw/master/vpnsetup.sh
 </summary>
 
 - Raspberry Pi OS (Raspbian) 11 或者 10
-- Kali Linux 2022
-- Alpine Linux 3.16 或者 3.15
+- Kali Linux
+- Alpine Linux 3.17 或者 3.16
 - Red Hat Enterprise Linux (RHEL) 9, 8 或者 7
 </details>
 
@@ -264,11 +266,11 @@ sudo ikev2.sh
 
 **[配置 IPsec/XAuth ("Cisco IPsec") VPN 客户端](docs/clients-xauth-zh.md)**
 
-**[[支持者] 下载电子书：搭建自己的 VPN 服务器](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)**
+**[:book: Book: 搭建自己的 IPsec VPN, OpenVPN 和 WireGuard 服务器](https://books2read.com/vpnzh)**
 
 开始使用自己的专属 VPN! :sparkles::tada::rocket::sparkles:
 
-喜欢这个项目？[:heart: 赞助](https://github.com/sponsors/hwdsl2?metadata_o=iz) 或 [:coffee: 支持](https://ko-fi.com/hwdsl2) 并访问 [仅限支持者的内容](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)。
+喜欢这个项目？[:heart: 赞助](https://github.com/sponsors/hwdsl2?metadata_o=iz) 或 [:coffee: 支持](https://ko-fi.com/hwdsl2) 并访问 [额外内容](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)。
 
 ## 重要提示
 
@@ -313,7 +315,7 @@ https://gitlab.com/hwdsl2/setup-ipsec-vpn/-/raw/master/extras/vpnupgrade.sh
 如果无法下载，打开 [vpnupgrade.sh](extras/vpnupgrade.sh)，然后点击右边的 `Raw` 按钮。按快捷键 `Ctrl/Cmd+A` 全选，`Ctrl/Cmd+C` 复制，然后粘贴到你喜欢的编辑器。
 </details>
 
-当前支持的 Libreswan 最新版本是 `4.9`。查看已安装版本：`ipsec --version`。
+当前支持的 Libreswan 最新版本是 `4.11`。查看已安装版本：`ipsec --version`。
 
 **注：** `xl2tpd` 可以使用系统的软件包管理器进行更新，例如 Ubuntu/Debian 上的 `apt-get`。
 
@@ -382,7 +384,7 @@ https://gitlab.com/hwdsl2/setup-ipsec-vpn/-/raw/master/extras/vpnuninstall.sh
 
 ## 授权协议
 
-版权所有 (C) 2014-2022 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
+版权所有 (C) 2014-2023 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
 基于 [Thomas Sarlandie 的工作](https://github.com/sarfata/voodooprivacy) (版权所有 2012)
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/)   

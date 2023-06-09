@@ -10,6 +10,8 @@ An IPsec VPN encrypts your network traffic, so that nobody between you and the V
 
 We will use [Libreswan](https://libreswan.org/) as the IPsec server, and [xl2tpd](https://github.com/xelerance/xl2tpd) as the L2TP provider.
 
+**[&raquo; :book: Book: Build Your Own VPN Server: A Step by Step Guide](https://books2read.com/vpnguide)**
+
 ## Quick start
 
 First, prepare your Linux server\* with an install of Ubuntu, Debian or CentOS.
@@ -70,7 +72,7 @@ A pre-built [Docker image](https://github.com/hwdsl2/docker-ipsec-vpn-server) is
 
 A cloud server, virtual private server (VPS) or dedicated server, with an install of:
 
-- Ubuntu 22.04, 20.04 or 18.04
+- Ubuntu 22.04 or 20.04
 - Debian 11 or 10
 - CentOS 7 or CentOS Stream 9/8
 - Rocky Linux or AlmaLinux 9/8
@@ -83,8 +85,8 @@ Other supported Linux distributions.
 </summary>
 
 - Raspberry Pi OS (Raspbian) 11 or 10
-- Kali Linux 2022
-- Alpine Linux 3.16 or 3.15
+- Kali Linux
+- Alpine Linux 3.17 or 3.16
 - Red Hat Enterprise Linux (RHEL) 9, 8 or 7
 </details>
 
@@ -264,11 +266,11 @@ Get your computer or device to use the VPN. Please refer to:
 
 **[Configure IPsec/XAuth ("Cisco IPsec") VPN Clients](docs/clients-xauth.md)**
 
-**[[Supporters] Download eBook: Set Up Your Own VPN Server](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-O5O7FVF8J)**
+**[:book: Book: Set Up Your Own IPsec VPN, OpenVPN and WireGuard Server](https://books2read.com/vpn)**
 
 Enjoy your very own VPN! :sparkles::tada::rocket::sparkles:
 
-Like this project? [:heart: Sponsor](https://github.com/sponsors/hwdsl2?metadata_o=i) or [:coffee: Support](https://ko-fi.com/hwdsl2) and access [supporter-only content](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-O5O7FVF8J).
+Like this project? [:heart: Sponsor](https://github.com/sponsors/hwdsl2?metadata_o=i) or [:coffee: Support](https://ko-fi.com/hwdsl2) and access [extra content](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-O5O7FVF8J).
 
 ## Important notes
 
@@ -313,7 +315,7 @@ https://gitlab.com/hwdsl2/setup-ipsec-vpn/-/raw/master/extras/vpnupgrade.sh
 If you are unable to download, open [vpnupgrade.sh](extras/vpnupgrade.sh), then click the `Raw` button on the right. Press `Ctrl/Cmd+A` to select all, `Ctrl/Cmd+C` to copy, then paste into your favorite editor.
 </details>
 
-The latest supported Libreswan version is `4.9`. Check installed version: `ipsec --version`.
+The latest supported Libreswan version is `4.11`. Check installed version: `ipsec --version`.
 
 **Note:** `xl2tpd` can be updated using your system's package manager, such as `apt-get` on Ubuntu/Debian.
 
@@ -382,7 +384,7 @@ For more information, see [Uninstall the VPN](docs/uninstall.md).
 
 ## License
 
-Copyright (C) 2014-2022 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
+Copyright (C) 2014-2023 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
 Based on [the work of Thomas Sarlandie](https://github.com/sarfata/voodooprivacy) (Copyright 2012)
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/)   

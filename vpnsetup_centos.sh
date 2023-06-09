@@ -8,7 +8,7 @@
 # The latest version of this script is available at:
 # https://github.com/hwdsl2/setup-ipsec-vpn
 #
-# Copyright (C) 2015-2022 Lin Song <linsongui@gmail.com>
+# Copyright (C) 2015-2023 Lin Song <linsongui@gmail.com>
 # Based on the work of Thomas Sarlandie (Copyright 2012)
 #
 # This work is licensed under the Creative Commons Attribution-ShareAlike 3.0
@@ -27,8 +27,6 @@
 YOUR_IPSEC_PSK=''
 YOUR_USERNAME=''
 YOUR_PASSWORD=''
-
-# VPN client setup: https://vpnsetup.net/clients
 
 # =====================================================
 
@@ -362,7 +360,7 @@ get_helper_scripts() {
 }
 
 get_swan_ver() {
-  SWAN_VER=4.9
+  SWAN_VER=4.11
   base_url="https://github.com/hwdsl2/vpn-extras/releases/download/v1.0.0"
   swan_ver_url="$base_url/v1-$os_type-$os_ver-swanver"
   swan_ver_latest=$(wget -t 2 -T 10 -qO- "$swan_ver_url" | head -n 1)

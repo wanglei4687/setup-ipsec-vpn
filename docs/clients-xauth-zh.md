@@ -14,8 +14,6 @@ IPsec/XAuth 模式也称为 "Cisco IPsec"。该模式通常能够比 IPsec/L2TP 
   * [iOS (iPhone/iPad)](#ios)
   * [Linux](#linux)
 
-喜欢这个项目？[:heart: 赞助](https://github.com/sponsors/hwdsl2?metadata_o=xz) 或 [:coffee: 支持](https://ko-fi.com/hwdsl2) 并访问 [仅限支持者的内容](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)。
-
 ## Windows
 
 > 你也可以使用 [IKEv2](ikev2-howto-zh.md)（推荐）或者 [IPsec/L2TP](clients-zh.md) 模式连接。无需安装额外的软件。
@@ -38,7 +36,7 @@ IPsec/XAuth 模式也称为 "Cisco IPsec"。该模式通常能够比 IPsec/L2TP 
 
 连接成功后，你会在 VPN Connect 状态窗口中看到 **tunnel enabled** 字样。单击 "Network" 选项卡，并确认 **Established - 1** 显示在 "Security Associations" 下面。最后你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#ikev1-故障排除)。
 
 ## OS X
 
@@ -62,7 +60,7 @@ IPsec/XAuth 模式也称为 "Cisco IPsec"。该模式通常能够比 IPsec/L2TP 
 
 要连接到 VPN：使用菜单栏中的图标，或者打开系统偏好设置的网络部分，选择 VPN 并单击 **连接**。最后你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#ikev1-故障排除)。
 
 ## Android
 
@@ -92,7 +90,7 @@ Docker 用户：在 [你的 env 文件](https://github.com/hwdsl2/docker-ipsec-v
 
 连接成功后，会在通知栏显示图标。最后你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#ikev1-故障排除)。
 
 ## iOS
 
@@ -112,7 +110,7 @@ Docker 用户：在 [你的 env 文件](https://github.com/hwdsl2/docker-ipsec-v
 
 连接成功后，会在通知栏显示图标。最后你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#ikev1-故障排除)。
 
 ## Linux
 
@@ -143,16 +141,12 @@ Fedora 28 （和更新版本）和 CentOS 8/7 用户可以使用 `yum` 安装 `N
 
 其它 Linux 版本用户可以使用 [IPsec/L2TP](clients-zh.md#linux) 模式连接。
 
-## 致谢
-
-本文档是在 [Streisand](https://github.com/StreisandEffect/streisand) 项目文档基础上翻译和修改。该项目由 Joshua Lund 和其他开发者维护。
-
 ## 授权协议
 
 注： 这个协议仅适用于本文档。
 
-版权所有 (C) 2016-2022 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
-基于 [Joshua Lund 的工作](https://github.com/StreisandEffect/streisand/blob/6aa6b6b2735dd829ca8c417d72eb2768a89b6639/playbooks/roles/l2tp-ipsec/templates/instructions.md.j2) (版权所有 2014-2016)
+版权所有 (C) 2016-2023 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
+受到 [Joshua Lund 的工作](https://github.com/StreisandEffect/streisand/blob/6aa6b6b2735dd829ca8c417d72eb2768a89b6639/playbooks/roles/l2tp-ipsec/templates/instructions.md.j2) 的启发
 
 本程序为自由软件，在自由软件联盟发布的[ GNU 通用公共许可协议](https://www.gnu.org/licenses/gpl.html)的约束下，你可以对其进行再发布及修改。协议版本为第三版或（随你）更新的版本。
 

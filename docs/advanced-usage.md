@@ -277,6 +277,8 @@ The example below **ONLY** applies to IKEv2 mode. Commands must be run as `root`
    ```
    service ipsec restart
    ```
+
+**Note:** Advanced users can set a different split tunneling configuration for specific IKEv2 client(s). Refer to section [Internal VPN IPs and traffic](#internal-vpn-ips-and-traffic) and expand "IKEv2 mode: Assign static IPs to VPN clients". Based on the example in that section, you may add the `leftsubnet=...` option to the `conn` section of the specific IKEv2 client, then restart the IPsec service.
 </details>
 
 ## Access VPN server's subnet
@@ -335,7 +337,7 @@ For detailed deployment methods, please refer to [this document](bbr.md).
 
 ## License
 
-Copyright (C) 2021-2022 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
+Copyright (C) 2021-2023 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/)   
 This work is licensed under the [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/)  

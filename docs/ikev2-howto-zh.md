@@ -4,7 +4,7 @@
 
 * [导言](#导言)
 * [配置 IKEv2 VPN 客户端](#配置-ikev2-vpn-客户端)
-* [故障排除](#故障排除)
+* [IKEv2 故障排除](#ikev2-故障排除)
 * [管理 IKEv2 客户端](#管理-ikev2-客户端)
 * [更改 IKEv2 服务器地址](#更改-ikev2-服务器地址)
 * [更新 IKEv2 辅助脚本](#更新-ikev2-辅助脚本)
@@ -32,7 +32,6 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 * [Linux](#linux)
 * [Mikrotik RouterOS](#routeros)
 
-喜欢这个项目？[:heart: 赞助](https://github.com/sponsors/hwdsl2?metadata_o=vz) 或 [:coffee: 支持](https://ko-fi.com/hwdsl2) 并访问 [仅限支持者的内容](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)。
 <details>
 <summary>
 了解如何更改 IKEv2 服务器地址。
@@ -56,7 +55,7 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 
 要连接到 VPN：单击系统托盘中的无线/网络图标，选择新的 VPN 连接，然后单击 **连接**。连接成功后，你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](#ikev2-故障排除)。
 
 #### 手动导入配置
 
@@ -109,7 +108,7 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 
 要连接到 VPN：单击系统托盘中的无线/网络图标，选择新的 VPN 连接，然后单击 **连接**。连接成功后，你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](#ikev2-故障排除)。
 
 <details>
 <summary>
@@ -150,7 +149,7 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 1. 选中 **在菜单栏中显示 VPN 状态** 复选框。
 1. 单击 **连接**。
 
-（可选功能）启用 **VPN On Demand（按需连接）** 以在你的 Mac 连接到 Wi-Fi 时自动启动 VPN 连接。要启用它，选中 VPN 连接的 **按需连接** 复选框，然后单击 **应用**。你可以自定义按需连接规则，以排除某些 Wi-Fi 网络（例如你的家庭网络）。参见 [[支持者] **指南：** 为 macOS 和 iOS 自定义 IKEv2 VPN On Demand 规则](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)
+（可选功能）启用 **VPN On Demand（按需连接）** 以在你的 Mac 连接到 Wi-Fi 时自动启动 VPN 连接。要启用它，选中 VPN 连接的 **按需连接** 复选框，然后单击 **应用**。你可以自定义按需连接规则，以排除某些 Wi-Fi 网络（例如你的家庭网络）。参见 [:book: Book: 搭建自己的 IPsec VPN, OpenVPN 和 WireGuard 服务器](https://books2read.com/vpnzh) 中的 "指南：为 macOS 和 iOS 自定义 IKEv2 VPN On Demand 规则"。
 
 你可以自定义 VPN On Demand 规则以排除某些 Wi-Fi 网络（例如你的家庭网络）。参见 [指南：为 macOS 和 iOS 自定义 IKEv2 VPN On Demand 规则（支持者）](https://ko-fi.com/post/Guide-Customize-IKEv2-VPN-On-Demand-rules-for-mac-H2H7G61WH)。
 
@@ -185,7 +184,7 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 
 连接成功后，你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](#ikev2-故障排除)。
 
 <details>
 <summary>
@@ -212,7 +211,7 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 1. 进入设置 -> VPN。选择与 `你的 VPN 服务器 IP`（或者域名）对应的 VPN 连接。
 1. 启用 **VPN** 连接。
 
-（可选功能）启用 **VPN On Demand（按需连接）** 以在你的 iOS 设备连接到 Wi-Fi 时自动启动 VPN 连接。要启用它，单击 VPN 连接右边的 "i" 图标，然后启用 **按需连接**。你可以自定义按需连接规则，以排除某些 Wi-Fi 网络（例如你的家庭网络），或者在 Wi-Fi 和蜂窝网络上都启动 VPN 连接。参见 [[支持者] **指南：** 为 macOS 和 iOS 自定义 IKEv2 VPN On Demand 规则](https://ko-fi.com/post/Support-this-project-and-get-access-to-supporter-o-X8X5FVFZC)
+（可选功能）启用 **VPN On Demand（按需连接）** 以在你的 iOS 设备连接到 Wi-Fi 时自动启动 VPN 连接。要启用它，单击 VPN 连接右边的 "i" 图标，然后启用 **按需连接**。你可以自定义按需连接规则，以排除某些 Wi-Fi 网络（例如你的家庭网络），或者在 Wi-Fi 和蜂窝网络上都启动 VPN 连接。参见 [:book: Book: 搭建自己的 IPsec VPN, OpenVPN 和 WireGuard 服务器](https://books2read.com/vpnzh) 中的 "指南：为 macOS 和 iOS 自定义 IKEv2 VPN On Demand 规则"。
 
 你可以自定义 VPN On Demand 规则以排除某些 Wi-Fi 网络（例如你的家庭网络），或者在 Wi-Fi 和蜂窝网络上都启动 VPN 连接。参见 [指南：为 macOS 和 iOS 自定义 IKEv2 VPN On Demand 规则（支持者）](https://ko-fi.com/post/Guide-Customize-IKEv2-VPN-On-Demand-rules-for-mac-H2H7G61WH)。
 
@@ -247,7 +246,7 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 
 连接成功后，你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](#ikev2-故障排除)。
 
 <details>
 <summary>
@@ -272,7 +271,7 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 1. 单击 **导入**。
 1. 单击新的 VPN 配置文件以开始连接。
 
-<details>
+<details open>
 <summary>
 或者，Android 11+ 用户也可以使用系统自带的 IKEv2 客户端连接。
 </summary>
@@ -350,7 +349,7 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 
 连接成功后，你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](#ikev2-故障排除)。
 
 ### Chrome OS
 
@@ -392,7 +391,7 @@ sudo certutil -L -d sql:/etc/ipsec.d -n "IKEv2 VPN CA" -a -o ca.cer
 
 （可选功能）你可以选择启用 Chrome OS 上的 "始终开启的 VPN" 功能。要管理该设置，进入设置 -> 网络，然后单击 **VPN**。
 
-如果在连接过程中遇到错误，请参见 [故障排除](#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](#ikev2-故障排除)。
 
 ### Linux
 
@@ -456,7 +455,7 @@ sudo chmod 600 ca.cer client.cer client.key
 
 连接成功后，你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](#故障排除)。
+如果在连接过程中遇到错误，请参见 [故障排除](#ikev2-故障排除)。
 
 ### RouterOS
 
@@ -532,11 +531,11 @@ sudo chmod 600 ca.cer client.cer client.key
 > mar/02/2022 12:52:57 by RouterOS 6.48   
 > RouterBOARD 941-2nD
 
-## 故障排除
+## IKEv2 故障排除
 
-*其他语言版本: [English](ikev2-howto.md#troubleshooting), [中文](ikev2-howto-zh.md#故障排除)。*
+*其他语言版本: [English](ikev2-howto.md#ikev2-troubleshooting), [中文](ikev2-howto-zh.md#ikev2-故障排除)。*
 
-**另见：** [检查日志及 VPN 状态](clients-zh.md#检查日志及-vpn-状态)，[IKEv1 故障排除](clients-zh.md#故障排除) 和 [高级用法](advanced-usage-zh.md)。
+**另见：** [检查日志及 VPN 状态](clients-zh.md#检查日志及-vpn-状态)，[IKEv1 故障排除](clients-zh.md#ikev1-故障排除) 和 [高级用法](advanced-usage-zh.md)。
 
 * [无法连接到 VPN 服务器](#无法连接到-vpn-服务器)
 * [无法连接多个 IKEv2 客户端](#无法连接多个-ikev2-客户端)
@@ -1187,7 +1186,7 @@ sudo ikev2.sh --removeikev2
 
 ## 授权协议
 
-版权所有 (C) 2016-2022 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
+版权所有 (C) 2016-2023 [Lin Song](https://github.com/hwdsl2) [![View my profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png)](https://www.linkedin.com/in/linsongui)   
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/)   
 这个项目是以 [知识共享署名-相同方式共享3.0](http://creativecommons.org/licenses/by-sa/3.0/) 许可协议授权。   

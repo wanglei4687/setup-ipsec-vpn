@@ -8,7 +8,7 @@
 # The latest version of this script is available at:
 # https://github.com/hwdsl2/setup-ipsec-vpn
 #
-# Copyright (C) 2020-2022 Lin Song <linsongui@gmail.com>
+# Copyright (C) 2020-2023 Lin Song <linsongui@gmail.com>
 #
 # This work is licensed under the Creative Commons Attribution-ShareAlike 3.0
 # Unported License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -66,7 +66,7 @@ check_os() {
     else
       exiterr "This script only supports CentOS/RHEL 7-9."
     fi
-  elif grep -qs "Amazon Linux release 2" /etc/system-release; then
+  elif grep -qs "Amazon Linux release 2 " /etc/system-release; then
     os_type=amzn
     os_ver=2
   else
@@ -96,8 +96,8 @@ EOF
     esac
     if [ "$os_type" = "alpine" ]; then
       os_ver=$(. /etc/os-release && printf '%s' "$VERSION_ID" | cut -d '.' -f 1,2)
-      if [ "$os_ver" != "3.15" ] && [ "$os_ver" != "3.16" ]; then
-        exiterr "This script only supports Alpine Linux 3.15/3.16."
+      if [ "$os_ver" != "3.16" ] && [ "$os_ver" != "3.17" ]; then
+        exiterr "This script only supports Alpine Linux 3.16/3.17."
       fi
     else
       os_ver=$(sed 's/\..*//' /etc/debian_version | tr -dc 'A-Za-z0-9')
@@ -157,7 +157,7 @@ confirm_or_abort() {
 show_header() {
 cat <<'EOF'
 
-IKEv2 Script   Copyright (c) 2020-2022 Lin Song   30 Oct 2022
+IKEv2 Script   Copyright (c) 2020-2023 Lin Song   11 Feb 2023
 
 EOF
 }
@@ -1212,9 +1212,9 @@ apply_ubuntu1804_nss_fix() {
     base_url="https://github.com/hwdsl2/vpn-extras/releases/download/v1.0.0"
     nss_url1="https://mirrors.kernel.org/ubuntu/pool/main/n/nss"
     nss_url2="https://mirrors.kernel.org/ubuntu/pool/universe/n/nss"
-    deb1="libnss3_3.49.1-1ubuntu1.8_amd64.deb"
-    deb2="libnss3-dev_3.49.1-1ubuntu1.8_amd64.deb"
-    deb3="libnss3-tools_3.49.1-1ubuntu1.8_amd64.deb"
+    deb1="libnss3_3.49.1-1ubuntu1.9_amd64.deb"
+    deb2="libnss3-dev_3.49.1-1ubuntu1.9_amd64.deb"
+    deb3="libnss3-tools_3.49.1-1ubuntu1.9_amd64.deb"
     bigecho2 "Applying fix for NSS bug on Ubuntu 18.04..."
     mkdir -p /opt/src
     cd /opt/src || exit 1
@@ -1244,6 +1244,20 @@ restart_ipsec_service() {
     bigecho2 "Restarting IPsec service..."
     mkdir -p /run/pluto
     service ipsec restart 2>/dev/null
+  fi
+}
+
+check_ikev2_connection() {
+  if grep -qs 'mobike=yes' "$IKEV2_CONF"; then
+    (sleep 3
+    if ! ipsec status | grep -q ikev2-cp; then
+      sed -i '/mobike=yes/s/yes/no/' "$IKEV2_CONF"
+      if [ "$os_type" = "alpine" ]; then
+        ipsec auto --add ikev2-cp >/dev/null
+      else
+        restart_ipsec_service >/dev/null
+      fi
+    fi) >/dev/null 2>&1 &
   fi
 }
 
@@ -1717,6 +1731,7 @@ ikev2setup() {
   else
     restart_ipsec_service
   fi
+  check_ikev2_connection
   print_setup_complete
   print_client_info
   if [ "$in_container" = 0 ]; then
